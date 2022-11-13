@@ -1,0 +1,67 @@
+<h1 mat-dialog-title>Editar alumno</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formAlumno" class="example-form">
+        <div class="row">
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Email</mat-label>
+                        <input [(ngModel)]="alumno.email"
+                        matInput formControlName="email" placeholder="Ingrese su email">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Nombre</mat-label>
+                        <input [(ngModel)]="alumno.nombre"
+                        matInput formControlName="nombre" placeholder="Ingrese un nombre">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Apellido</mat-label>
+                        <input [(ngModel)]="alumno.apellido"
+                        matInput formControlName="apellido" placeholder="Ingrese apellido">
+                    </mat-form-field>
+                </p>
+            </div>
+        
+    
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Edad</mat-label>
+                        <input [(ngModel)]="alumno.edad" 
+                         matInput formControlName="edad" placeholder="Ingrese una edad">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Pais</mat-label>
+                        <input [(ngModel)]="alumno.pais" 
+                        matInput formControlName="pais" placeholder="Ingrese un pais">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="col">
+                <p>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Sexo</mat-label>
+                        <input [(ngModel)]="alumno.sexo"
+                        matInput formControlName="sexo" placeholder="Ingrese el tipo de genero">
+                    </mat-form-field>
+                </p>
+            </div>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>No</button>
+    <button mat-button (click)="editarAlumno()" [disabled]="!formAlumno.valid">Editar Alumno</button>
+</div>
